@@ -14,31 +14,14 @@ st.set_page_config(
 # Inject custom CSS styles globally
 inject_custom_css()
 
-# Sidebar Configuration for LLM API Keys (renders on all pages!)
+# Sidebar Configuration (renders on all pages!)
 with st.sidebar:
     st.image("https://img.icons8.com/color/96/000000/combo-chart.png", width=80)
-    st.markdown("### ⚙️ AI Assistant Settings")
-    st.markdown("If you want the AI chat to answer complex questions, choose a model and add your key here. Otherwise, you can keep the default Demo Mode!")
-    
-    provider = st.selectbox(
-        "AI Model",
-        ["Demo Mode (Works Offline)", "Groq API", "OpenAI", "Gemini"],
-        help="Select 'Demo Mode' to ask queries using the built-in database without an API key."
-    )
-    
-    api_key = ""
-    if provider != "Demo Mode (Works Offline)":
-        api_key = st.text_input(
-            f"Enter {provider} Key",
-            type="password",
-            help=f"Your {provider} key. Stored safely."
-        )
     
     # Store settings in session state
-    st.session_state["llm_provider"] = provider
-    st.session_state["llm_api_key"] = api_key
+    st.session_state["llm_provider"] = "Demo Mode (Works Offline)"
+    st.session_state["llm_api_key"] = ""
     
-    st.markdown("---")
     st.markdown("### 💡 Quick Help")
     st.info(
         "Use the sidebar links to switch pages. "

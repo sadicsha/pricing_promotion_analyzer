@@ -28,11 +28,7 @@ agent = get_agent(llm_provider, llm_key)
 # Sidebar indicator
 with st.sidebar:
     st.markdown("### 🖥️ AI Status Details")
-    status_color = "green" if agent.is_live else "orange"
-    status_text = "Connected to AI Model" if agent.is_live else "Offline Mode (No Key)"
-    
-    st.markdown(f"**Status:** :{status_color}[{status_text}]")
-    st.markdown(f"**Model Selected:** `{llm_provider}`")
+    st.markdown("**Status:** :green[Active (Offline Demo Mode)]")
     
     st.markdown("---")
     st.markdown("### 📋 Shop Data Sheets Available")
