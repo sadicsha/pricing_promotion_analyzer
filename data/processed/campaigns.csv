@@ -1,0 +1,6 @@
+campaign_id,campaign_name,channel,discount_pct,budget
+C001,New Year Sale,Email,10,5000
+C002,Summer Sale,Google Ads,15,8000
+C003,Festival Sale,Social Media,20,12000
+C004,Flash Sale,Influencer,25,10000
+C005,Weekend Bonanza,SMS,5,3000

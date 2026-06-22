@@ -1,0 +1,13 @@
+pandas
+numpy
+sqlalchemy
+streamlit
+plotly
+scikit-learn
+langchain
+langchain-groq
+langchain-community
+chromadb
+python-dotenv
+matplotlib
+openpyxl
